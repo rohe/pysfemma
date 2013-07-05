@@ -1,0 +1,22 @@
+How to install pySAML2 on Windows
+
+1) Install Python (2.7.5) http://www.python.org/getit/
+2) Change the environment variable PATH to include C:\Python27;C:\Python27\Lib\site-packages\;C:\Python27\Scripts\;
+3) Install setuptools, you can get the latest version from https://pypi.python.org/pypi/setuptools.
+   Unpack, change directory to where it's installed and run ez_setyp.py.
+4) Install pip, eg. run 'easy_install pip'.
+5) Install openssl, add the search path to PATH
+6) ”Install” XMLSEC and all it's dependencies. Fetch library from ftp://ftp.zlatkovic.com/libxml/ 32 or 64 bit.
+	• XmlSec
+	• Xsldbg
+	•Libxslt
+	•Libxml
+	•Iconv
+	•Zlib
+7) Add search paths for all these, for example ex. c:\<basedir for dependencies>\Libxml\bin.
+8) pySAML2 has a dependency on M2Crypto. Normally you just fetch the files and build your own version of this.
+   But this demands that you have VisualStudio 2008 or 2010 on the machine plus Swig.
+   Instead of doing this you can fetch a precompiled package from http://chandlerproject.org/Projects/MeTooCrypto#Downloads.
+9) Get pySAML2 from https://github.com/rohe/pysaml2
+10) Install pySAML2 by running 'python setup.py install' in the pysaml2 library.
+11) If any libraries are missing you can install them by running 'pip install <missing library>
